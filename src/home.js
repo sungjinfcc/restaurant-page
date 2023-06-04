@@ -13,7 +13,7 @@ function createHome() {
     createHtmlElement("p", null, null, "Best bibimbap in your country")
   );
   home.appendChild(
-    createHtmlElement("p", null, null, "Made with passion since 1982")
+    createHtmlElement("p", null, null, "Made with passion since 1994")
   );
   home.appendChild(foodImage);
   home.appendChild(

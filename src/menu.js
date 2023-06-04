@@ -6,21 +6,21 @@ function createMenu() {
 
   const menu = [
     {
-      name: "Pan canilla",
+      name: "Kalbi Bibimbap",
       description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque placerat, tellus sit amet",
+        "Large serving of rice mixed with assorted vegetables, spicy red pepper paste, and a side of Korean-style soup",
       price: "20$",
     },
     {
-      name: "Pan sobado",
+      name: "Bulgogi Bibimbap",
       description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque placerat, tellus sit amet",
+        "Large serving of rice mixed with spicy marinated beef, assorted vegetables, spicy red pepper paste, a side of and Korean-style soup",
       price: "20$",
     },
     {
-      name: "Pan Andino",
+      name: "Tuna & Veggie Bibimbap",
       description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque placerat, tellus sit amet",
+        "Large serving of rice mixed with canned light tuna, assorted vegetables, spicy red pepper paste, and a side of Korean-style soup",
       price: "20$",
     },
   ];

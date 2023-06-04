@@ -22,7 +22,7 @@ function createHeader() {
   const header = document.createElement("header");
   header.classList.add("header");
 
-  const title = createHtmlElement("h1", null, ["title"], "BIBIMBOP");
+  const title = createHtmlElement("h1", null, ["title"], "BIBIMBAP");
 
   header.appendChild(title);
 
