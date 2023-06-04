@@ -23,10 +23,8 @@ function createHome() {
   return home;
 }
 
-function renderHome() {
+export default function renderHome() {
   const main = document.querySelector("main");
   main.innerHTML = "";
   main.appendChild(createHome());
 }
-
-export default renderHome;

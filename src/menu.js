@@ -1,86 +1,55 @@
-import Image from "./images/background.jpg";
+import { createHtmlElement } from "./index";
 
 function createMenu() {
-  const menu = document.createElement("div");
-  menu.classList.add("menu");
+  const menuDiv = document.createElement("div");
+  menuDiv.classList.add("menu");
 
-  menu.appendChild(
-    createMenuItem(
-      "Salsiccia",
-      "Tomato sauce, Mozarella, Tomato, Homemade sausage, Garlic, Basil"
-    )
-  );
-  menu.appendChild(
-    createMenuItem(
-      "Gamberi",
-      "Tomato sauce, Mozarella, Shrimps, Feta cheese, Olives, Basil"
-    )
-  );
-  menu.appendChild(
-    createMenuItem(
-      "Pepe",
-      "Tomato sauce, Mozarella, Chilli flakes, Olives, Basil"
-    )
-  );
-  menu.appendChild(
-    createMenuItem(
-      "Disgustoso",
-      "Tomato sauce, Bacon, Pineapple, Olives, Basil"
-    )
-  );
-  menu.appendChild(
-    createMenuItem(
-      "Colorato",
-      "Tomato sauce, Mozarella, Onion, Pepper, Champignons, Basil"
-    )
-  );
-  menu.appendChild(
-    createMenuItem(
-      "Pomodoro",
-      "Tomato sauce, Mozarella, Tomato, Onion, Feta cheese, Chilli"
-    )
-  );
-  menu.appendChild(
-    createMenuItem(
-      "Crema",
-      "White sauce, Mozarella, Shrimps, Salmon, Pineapple, Olives, Basil"
-    )
-  );
-  menu.appendChild(
-    createMenuItem(
-      "Carne",
-      "Tomato sauce, Mozarella, Homemade sausage, Bacon, Garlic, Pepper, Chilli"
-    )
-  );
+  const menu = [
+    {
+      name: "Pan canilla",
+      description:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque placerat, tellus sit amet",
+      price: "20$",
+    },
+    {
+      name: "Pan sobado",
+      description:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque placerat, tellus sit amet",
+      price: "20$",
+    },
+    {
+      name: "Pan Andino",
+      description:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque placerat, tellus sit amet",
+      price: "20$",
+    },
+  ];
+  menu.forEach((item) => {
+    const div = createHtmlElement("div", null, ["menu-card"], null);
 
-  return menu;
+    const name = createHtmlElement("h2", null, ["menu-title"], item.name);
+    const description = createHtmlElement(
+      "p",
+      null,
+      ["menu-description"],
+      item.description
+    );
+    const price = createHtmlElement("h2", null, ["menu-price"], item.price);
+    const hr = createHtmlElement("hr", null, ["menu-hr"], null);
+
+    div.appendChild(name);
+    div.appendChild(description);
+    div.appendChild(price);
+    div.appendChild(hr);
+
+    menuDiv.appendChild(div);
+  });
+
+  return menuDiv;
 }
 
-function createMenuItem(name, description) {
-  const menuItem = document.createElement("div");
-  menuItem.classList.add("menu-item");
-
-  const foodImage = document.createElement("img");
-  foodImage.src = Image;
-  foodImage.alt = `${name}`;
-
-  const foodName = document.createElement("h2");
-  foodName.textContent = name;
-
-  const foodDescription = document.createElement("p");
-  foodDescription.textContent = description;
-
-  menuItem.appendChild(foodImage);
-  menuItem.appendChild(foodName);
-  menuItem.appendChild(foodDescription);
-
-  return menuItem;
-}
-
-function renderMenu() {
+export default function renderMenu() {
   const main = document.querySelector("main");
   main.innerHTML = "";
   main.appendChild(createMenu());
 }
-
-export default renderMenu;

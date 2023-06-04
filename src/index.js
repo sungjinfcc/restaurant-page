@@ -2,6 +2,10 @@ import "./style.css";
 import renderHome from "./home";
 import renderMenu from "./menu";
 import renderAbout from "./about";
+import "@fortawesome/fontawesome-free/js/fontawesome";
+import "@fortawesome/fontawesome-free/js/solid";
+import "@fortawesome/fontawesome-free/js/regular";
+import "@fortawesome/fontawesome-free/js/brands";
 
 function createHtmlElement(type, id, arrayClasses, content) {
   const element = document.createElement(type);
@@ -18,7 +22,7 @@ function createHeader() {
   const header = document.createElement("header");
   header.classList.add("header");
 
-  const title = createHtmlElement("h1", null, ["title"], "Korean Restaurant");
+  const title = createHtmlElement("h1", null, ["title"], "BIBIMBOP");
 
   header.appendChild(title);
 
@@ -61,7 +65,8 @@ function createFooter() {
   copyright.textContent = `Copyright © 2023 sungjinfcc`;
 
   const githubLink = document.createElement("a");
-  githubLink.href = "https://github.com/michalosman";
+  githubLink.href = "https://github.com/sungjinfcc";
+  githubLink.target = "_black";
 
   const githubIcon = document.createElement("i");
   githubIcon.classList.add("fab");
